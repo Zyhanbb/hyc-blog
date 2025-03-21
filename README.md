@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+如果你的页面已经成功部署到 GitHub Pages，每次更新页面时，可以按照以下步骤操作：  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## **1️⃣ 更新代码**
+首先，确保你已经修改了项目代码。然后，在终端执行：  
+```sh
+git add .
+git commit -m "更新页面内容"
+git push origin main  # 如果主分支是 master，就改成 master
+```
+**解释**：
+- `git add .` 👉 添加所有修改的文件到暂存区。  
+- `git commit -m "更新页面内容"` 👉 提交更改，消息可以换成具体的修改内容。  
+- `git push origin main` 👉 将更新的代码推送到 GitHub 仓库的 `main` 分支（如果你的主分支是 `master`，就改成 `master`）。  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## **2️⃣ 重新构建 & 部署**
+如果你使用 `gh-pages` 部署 GitHub Pages，需要重新构建并部署：  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```sh
+npm run build
+npm run deploy
+```
+**解释**：
+- `npm run build` 👉 重新打包 React 项目，生成 `build/` 目录。  
+- `npm run deploy` 👉 运行 `gh-pages` 部署，把 `build/` 目录推送到 `gh-pages` 分支，使 GitHub Pages 更新。  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## **3️⃣ 等待 GitHub Pages 更新**
+GitHub Pages 部署可能需要 **几秒到几分钟**，然后你可以刷新网页查看最新更新。  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **完整流程（一次性执行）**
+如果你想用 **一条命令** 更新并部署，可以使用：  
+```sh
+git add . && git commit -m "更新页面" && git push origin main && npm run build && npm run deploy
+```
+这样会 **提交代码 + 重新打包 + 更新 GitHub Pages** 一次性完成！🚀  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **⚠️ 常见问题**
+1. **更新后页面没有变化？**
+   - **清除浏览器缓存**，或在地址栏输入 `Ctrl + Shift + R` 强制刷新。  
+   - 等待 GitHub Pages 同步完成（通常 1-5 分钟）。  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **忘记安装 `gh-pages`？**
+   - 运行 `npm install gh-pages --save-dev` 安装它。  
 
-### `npm run eject`
+3. **package.json 里没有 `deploy` 命令？**
+   - 确保 `package.json` 里有这个配置：
+     ```json
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build"
+     }
+     ```
+   - 如果没有，手动运行：
+     ```sh
+     npx gh-pages -d build
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
