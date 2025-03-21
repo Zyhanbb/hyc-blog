@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import {RouterProvider} from 'react-router-dom'
-import router from './router';
+import "./App.css";
+import RouterComponent from "./router";  // ✅ 修改为引入 RouterComponent
+
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <RouterComponent />  {/* ✅ 直接渲染 useRoutes() 生成的路由 */}
     </div>
   );
 }
