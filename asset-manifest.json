@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/hyc-blog/static/css/main.f855e6bc.css",
-    "main.js": "/hyc-blog/static/js/main.97552834.js",
+    "main.css": "/hyc-blog/static/css/main.cc08c701.css",
+    "main.js": "/hyc-blog/static/js/main.20a59ac1.js",
     "static/js/453.ede2c593.chunk.js": "/hyc-blog/static/js/453.ede2c593.chunk.js",
+    "static/media/p2.png": "/hyc-blog/static/media/p2.6387c702375eb7373b5b.png",
+    "static/media/p1.png": "/hyc-blog/static/media/p1.b1f9fe4988d0f2382f54.png",
     "index.html": "/hyc-blog/index.html",
-    "main.f855e6bc.css.map": "/hyc-blog/static/css/main.f855e6bc.css.map",
-    "main.97552834.js.map": "/hyc-blog/static/js/main.97552834.js.map",
+    "main.cc08c701.css.map": "/hyc-blog/static/css/main.cc08c701.css.map",
+    "main.20a59ac1.js.map": "/hyc-blog/static/js/main.20a59ac1.js.map",
     "453.ede2c593.chunk.js.map": "/hyc-blog/static/js/453.ede2c593.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.97552834.js"
+    "static/css/main.cc08c701.css",
+    "static/js/main.20a59ac1.js"
   ]
 }
