@@ -1,0 +1,7 @@
+.home{
+   
+    text-align: left;
+    /* width: 300px;设置一个宽度以便观察效果 */
+     /* border: 1px solid #000;添加边框以便观察效果 */
+    padding: 50px; /* 添加内边距以便观察效果 */
+}

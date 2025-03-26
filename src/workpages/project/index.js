@@ -1,8 +1,12 @@
 import React from "react";
+import PlaneBanner from "./Plane"; // 确保路径正确
 
-const Project = ()=>{
- return(
-    <div>Project</div>
- )
+function App() {
+  return (
+    <div>
+      <PlaneBanner />
+    </div>
+  );
 }
-export default Project;
+
+export default App;

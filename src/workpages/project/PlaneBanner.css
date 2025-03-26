@@ -1,0 +1,58 @@
+/* 页面整体样式 */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    height: 300px;
+    overflow: hidden; /* 防止动画溢出 */
+  }
+  
+  /* 按钮样式 */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* 飞机和横幅的容器 */
+  .plane-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: -300px; /* 初始位置在屏幕左侧外 */
+    white-space: nowrap;
+  }
+  
+  /* 飞机图片 */
+  .plane {
+    width: 80px;
+  }
+  
+  /* 横幅样式 */
+  .banner {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  /* 触发动画时的效果 */
+  .animate {
+    animation: fly-across 10s linear forwards;
+  }
+  
+  /* 飞机横幅从左飞到右 */
+  @keyframes fly-across {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(120vw); /* 确保完全飞出屏幕 */
+    }
+  }
+  
